@@ -6,7 +6,7 @@
  * You may assume that each input would have exactly one solution, and you may not use the same element twice.
  * You can return the answer in any order.
  */
-export const twoSum = (nums: number[], target: number) => {
+export const twoSum = (nums: number[], target: number): number[] => {
   // I - array of integers, target number
   // O - an array of the indexes which add up to the target
   // C - can not use the same element twice, answer can be in any order

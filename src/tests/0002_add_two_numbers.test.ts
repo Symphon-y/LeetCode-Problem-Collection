@@ -1,4 +1,4 @@
-import { addTwoNumbers } from '../leetcode/0002_add_two_numbers/add_two_numbers.ts';
+import { addTwoNumbers } from '../leetcode/0002_add_two_numbers/solution.ts';
 import { LinkedList } from '../utilities/0002_add_two_numbers/LinkedList.ts';
 import { linkedListValuesToArray } from '../utilities/0002_add_two_numbers/LinkedListValuesToArray.ts';
 
