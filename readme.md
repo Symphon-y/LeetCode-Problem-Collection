@@ -36,7 +36,7 @@ git clone https://github.com/Symphon-y/leetcode-problems.git
 2. Navigate to the project directory:
 
 ```bash
-cd leetcode-problems
+cd leetcode
 ```
 3. Install the project dependencies:
 ```bash
