@@ -10,6 +10,12 @@ This Git repository is a collection of LeetCode problems, each solved using Type
     - [Prerequisites](#prerequisites)
     - [Installation](#installation)
     - [Usage](#usage)
+  - [Project Structure](#project-structure)
+  - [Running Tests](#running-tests)
+  - [Contribution Guidelines](#contribution-guidelines)
+  - [License](#license)
+
+
 
 ## Getting Started
 
@@ -38,3 +44,67 @@ npm install
 ```
 
 ### Usage
+Each LeetCode problem is organized in its own directory within the src folder, with separate TypeScript files for the problem solution and tests. To work on a specific problem, follow these steps:
+
+1. Navigate to the problem directory
+```bash
+cd src/leetcode/problem-name
+```
+2. Open the solution.ts file and implement your solution.
+3. Run the test suite to check if your solution is correct:
+```bash
+npm test
+```
+4. You can also add custom test cases in the problem-name.test.ts file:
+
+## Project Structure
+The repository has the following structure:
+```bash
+|--leetcode/
+|   |-- src/
+|   |   |-- leetcode/
+|   |   |   |-- problem-1/
+|   |   |   |   |-- solution.ts
+|   |   |   |   |-- problem-1.test.ts
+|   |   |   |
+|   |   |   |-- problem-2/
+|   |   |   |   |-- solution.ts
+|   |   |   |   |-- problem-2.test.ts
+|   |   |   |
+|   |   |   |-- ...
+|   |
+|   |-- package.json
+|   |-- jest.config.js
+|   |-- tsconfig.json
+|   |-- README.md
+|   |-- .gitignore
+
+```
+
+* src/: Contains directories for each LeetCode problem.
+* package.json: Lists project dependencies and scripts for running tests.
+* jest.config.js: Jest configuration for running tests.
+* tsconfig.json: TypeScript configuration.
+* README.md: The documentation you are currently reading.
+* .gitignore: List of files and directories to be ignored by Git.
+
+## Running Tests
+To run the test suite for all problems in the repository, you can use the following command:
+```bash
+npm test
+```
+To only run tests for a specific problem you may pass an argument to the test command
+```bash
+npm run test "[problem-name].test.ts"
+```
+## Contribution Guidelines
+If you'd like to contribute to this project, feel free to submit a pull request. Please make sure to follow these guidelines:
+1. Create a new directory for the LeetCode problem you want to add.
+2. Write the TypeScript solution in the solution.ts file.
+3. Add test cases in the problem-name.test.ts file.
+4. Ensure that the tests pass by running npm test.
+5. Update the README.md if necessary.
+
+## License
+This project is licensed under the MIT License
+
