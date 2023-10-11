@@ -1,17 +1,20 @@
 export const getAllSubstrings = (s: string): string[] => {
   let result: string[] = [];
-  const stringLength = s.length - 1;
+  const stringLength = s.length;
 
   for (let i = 0; i < s.length; i++) {
-    result.push(s.substring(i, stringLength));
+    let copy = [...s].join('');
+    result.push(copy.slice(i, s.length));
   }
 
   for (let i = 0; i < s.length; i++) {
-    result.push(s.substring(stringLength, i));
+    let copy = [...s].join('');
+    result.push(copy.slice(s.length, i));
   }
 
   for (let i = 0; i < s.length; i++) {
-    result.push(s.substring(i, stringLength - i));
+    let copy = [...s].join('');
+    result.push(copy.slice(i, s.length - i));
   }
 
   return result.sort();

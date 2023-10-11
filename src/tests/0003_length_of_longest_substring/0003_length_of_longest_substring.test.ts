@@ -11,3 +11,7 @@ test('if the input is "bbbbb" then the answer is "b", with the length of 1.', ()
 test('If the input is "pwwkew" then the answer is "wke", with the length of 3.', () => {
   expect(lengthOfLongestSubstring('pwwkew')).toEqual(3);
 });
+
+test('If the input is "au" then the answer is "au", with the length of 2.', () => {
+  expect(lengthOfLongestSubstring('au')).toEqual(2);
+});

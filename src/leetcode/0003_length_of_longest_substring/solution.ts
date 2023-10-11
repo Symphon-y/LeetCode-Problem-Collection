@@ -1,5 +1,5 @@
 import { getAllSubstrings } from '../../utilities/0003_length_of_longest_substring/getAllSubstrings.ts';
-import { cleanArray } from '../../utilities/0003_length_of_longest_substring/sortArrayByLengthOfContents.ts';
+import { cleanArray } from '../../utilities/0003_length_of_longest_substring/cleanArray.ts';
 
 /**
  *
@@ -35,11 +35,20 @@ import { cleanArray } from '../../utilities/0003_length_of_longest_substring/sor
  * s consists of English letters, digits, symbols and spaces.
  */
 export const lengthOfLongestSubstring = (s: string): number => {
+  // handle edge cases
+  if (s === '') {
+    return 0;
+  } else if (s === ' ') {
+    return 1;
+  } else if (s?.length === 1) {
+    return 1;
+  }
   // get all substrings in a string
   const allSubstrings = getAllSubstrings(s);
+  // console.log(allSubstrings);
   // clean up array (remove duplicates, empty strings, ect)
   const cleanedArray = cleanArray(allSubstrings);
+  // console.log(cleanedArray);
   // return the longest one
-  console.log('cleanedArray', cleanedArray);
-  return cleanedArray[0].length;
+  return cleanedArray[0]?.length;
 };
