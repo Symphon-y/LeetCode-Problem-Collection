@@ -12,4 +12,5 @@ export const linkedListValuesToArray = (
   } else {
     return array;
   }
+  return array;
 };
