@@ -53,7 +53,7 @@ cd src/leetcode/problem-name
 2. Open the solution.ts file and implement your solution.
 3. Run the test suite to check if your solution is correct:
 ```bash
-npm test
+npm run test
 ```
 4. You can also add custom test cases in the problem-name.test.ts file:
 
@@ -91,7 +91,7 @@ The repository has the following structure:
 ## Running Tests
 To run the test suite for all problems in the repository, you can use the following command:
 ```bash
-npm test
+npm run test
 ```
 To only run tests for a specific problem you may pass an argument to the test command
 ```bash
