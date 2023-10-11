@@ -1,4 +1,4 @@
-import { twoSum } from '../leetcode/two_sum/two_sum.ts';
+import { twoSum } from '../leetcode/0001_two_sum/two_sum.ts';
 
 test('should return [0,1] when input is [2, 7, 11, 15] and the target is 9', () => {
   expect(twoSum([2, 7, 11, 15], 9));
