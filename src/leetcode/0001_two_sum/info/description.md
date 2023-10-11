@@ -9,7 +9,7 @@ You may assume the two numbers do not contain any leading zero, except the numbe
 
 
 #### Example 1:
-![Alt text](addtwonumber1.jpg)
+![Alt text](assets/addtwonumber1.jpg)
 
 <b>Input:</b> l1 = [2,4,3], l2 = [5,6,4]
 
