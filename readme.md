@@ -12,6 +12,7 @@ This Git repository is a collection of LeetCode problems, each solved using Type
     - [Usage](#usage)
   - [Project Structure](#project-structure)
   - [Running Tests](#running-tests)
+  - [Troubleshooting](#troubleshooting)
   - [Contribution Guidelines](#contribution-guidelines)
   - [License](#license)
 
@@ -97,6 +98,24 @@ To only run tests for a specific problem you may pass an argument to the test co
 ```bash
 npm run test "[problem-name].test.ts"
 ```
+
+## Troubleshooting
+If you encounter an error when attempting `npm run test` that says something similar to `ts-node: command not found` make sure you've installed ts-node, and that the `ts-node` command is added to your PATH.
+
+Some things you can try
+1. install ts-node locally
+```bash
+npm install ts-node
+```
+2. install ts-node globally
+```bash
+npm install -g ts-node
+```
+3. Add this line to your .zshrc file. This will add the .nvm/bin directory to your PATH, which contains the ts-node command.
+```bash
+export PATH=$PATH:$HOME/.nvm/bin
+```
+
 ## Contribution Guidelines
 If you'd like to contribute to this project, feel free to submit a pull request. Please make sure to follow these guidelines:
 1. Create a new directory for the LeetCode problem you want to add.
