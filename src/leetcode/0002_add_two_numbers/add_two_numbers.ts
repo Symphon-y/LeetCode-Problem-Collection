@@ -2,12 +2,17 @@ import {
   LinkedList,
   LinkedListNode,
 } from '../../utilities/0002_add_two_numbers/LinkedList.ts';
+import { linkedListValuesToArray } from '../../utilities/0002_add_two_numbers/LinkedListValuesToArray.ts';
 import { ObjCache } from '../../types/0002_add_two_numbers/objCache.ts';
 
 /**
  * @link - https://leetcode.com/problems/add-two-numbers/
  *
- * Definition for singly-linked list.
+ * You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order, and each of their nodes contains a single digit. Add the two numbers and return the sum as a linked list.
+ * You may assume the two numbers do not contain any leading zero, except the number 0 itself.
+ *
+ * @example
+ * // Definition for singly-linked list.
  * class LinkedListNode {
  *     val: number
  *     next: LinkedListNode | null
@@ -17,18 +22,7 @@ import { ObjCache } from '../../types/0002_add_two_numbers/objCache.ts';
  *     }
  * }
  */
-const linkedListValuesToArray = (node: LinkedListNode, array: unknown[]) => {
-  // if node has value push to array
-  array.push(Number(node?.val));
-  // if node has next property recurse else return array
-  if (node.next) {
-    linkedListValuesToArray(node.next, array);
-  } else {
-    return array;
-  }
-};
-
-const addTwoNumbers = (
+export const addTwoNumbers = (
   l1: LinkedListNode | null,
   l2: LinkedListNode | null
 ): LinkedListNode | null => {
