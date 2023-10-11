@@ -1,3 +1,6 @@
+import { getAllSubstrings } from '../../utilities/0003_length_of_longest_substring/getAllSubstrings.ts';
+import { cleanArray } from '../../utilities/0003_length_of_longest_substring/sortArrayByLengthOfContents.ts';
+
 /**
  *
  * @link https://leetcode.com/problems/longest-substring-without-repeating-characters/
@@ -32,5 +35,11 @@
  * s consists of English letters, digits, symbols and spaces.
  */
 export const lengthOfLongestSubstring = (s: string): number => {
-  return 0;
+  // get all substrings in a string
+  const allSubstrings = getAllSubstrings(s);
+  // clean up array (remove duplicates, empty strings, ect)
+  const cleanedArray = cleanArray(allSubstrings);
+  // return the longest one
+  console.log('cleanedArray', cleanedArray);
+  return cleanedArray[0].length;
 };
