@@ -30,10 +30,14 @@ export class LinkedList {
     current.next = newNode;
   }
 
-  print(text?: string) {
+  print(text?: string): unknown[] {
+    let result: unknown[] = [];
     let current = this.head;
     while (current) {
       current = current.next;
+      result.push(current);
+      console.log(current);
     }
+    return result;
   }
 }
