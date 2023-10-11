@@ -1,39 +1,65 @@
-# Description
+# Two Sum
+## Information
 * [Leethub link](https://leetcode.com/problems/two-sum/)
+* Difficulty: <span style="color: green">Easy</span>
 
-You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order, and each of their nodes contains a single digit. Add the two numbers and return the sum as a linked list.
+## Description
 
-You may assume the two numbers do not contain any leading zero, except the number 0 itself.
+Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
+
+You may assume that each input would have exactly one solution, and you may not use the same element twice.
+
+You can return the answer in any order.
 
 ## Examples:
 
 
 #### Example 1:
-![Alt text](assets/addtwonumber1.jpg)
 
-<b>Input:</b> l1 = [2,4,3], l2 = [5,6,4]
-
-<b>Output:</b> [7,0,8]
-
-<b>Explanation:</b> 342 + 465 = 807.
-
+<b>Input:</b>
+```
+nums = [2,7,11,15]
+target = 9
+```
+<b>Output:</b>
+```
+[0,1]
+```
+<b>Explanation:</b>
+```
+Because nums[0] + nums[1] == 9, we return [0, 1].
+```
 #### Example 2:
 
-<b>Input:</b> l1 = [0], l2 = [0]
-
-<b>Output:</b> [0]
-
+<b>Input:</b>
+```
+nums = [3,2,4]
+target = 6
+```
+<b>Output:</b>
+```
+[1,2]
+```
 #### Example 3:
 
-<b> Input:</b> l1 = [9,9,9,9,9,9,9], l2 = [9,9,9,9]
+<b>Input:</b>
+```
+nums = [3,3]
+target = 6
+```
 
-<b>Output:</b> [8,9,9,9,0,0,0,1]
+<b>Output:</b>
+```
+[0,1]
+```
 
 
+Constraints:
 
-## Constraints:
+    2 <= nums.length <= 104
+    -109 <= nums[i] <= 109
+    -109 <= target <= 109
+    Only one valid answer exists.
 
-    The number of nodes in each linked list is in the range [1, 100].
-    0 <= Node.val <= 9
-    It is guaranteed that the list represents a number that does not have leading zeros.
 
+Follow-up: Can you come up with an algorithm that is less than O(n2) time complexity?
