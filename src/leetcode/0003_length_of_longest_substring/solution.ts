@@ -45,10 +45,8 @@ export const lengthOfLongestSubstring = (s: string): number => {
   }
   // get all substrings in a string
   const allSubstrings = getAllSubstrings(s);
-  // console.log(allSubstrings);
   // clean up array (remove duplicates, empty strings, ect)
   const cleanedArray = cleanArray(allSubstrings);
-  // console.log(cleanedArray);
   // return the longest one
   return cleanedArray[0]?.length;
 };
