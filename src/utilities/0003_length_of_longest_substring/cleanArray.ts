@@ -1,25 +1,20 @@
+import { isUnique } from './isUnique.ts';
+
 export const cleanArray = (arr: string[]): string[] => {
-  let uniqueSubstrings: { [key: string]: string } = {};
+  // Create a set to store unique substrings
+  const uniqueSubstrings = new Set<string>();
 
-  arr.forEach((substring) => {
-    uniqueSubstrings[substring] = substring;
-    //substring.length > 0 && (uniqueSubstrings[substring] = substring);
-  });
-
-  let noDuplicates = { ...uniqueSubstrings };
-
-  Object.keys(uniqueSubstrings).forEach((substring) => {
-    for (let i = 0; i < substring.length; i++) {
-      for (let j = 1; j < substring.length; j++) {
-        if (i !== j && substring[i] === substring[j]) {
-          delete noDuplicates[substring];
-        }
-      }
+  for (const substring of arr) {
+    // Check for duplicate letters/values in the substring
+    if (isUnique(substring)) {
+      uniqueSubstrings.add(substring);
     }
-  });
+  }
 
-  const cleanedArray = Object.keys(noDuplicates).sort((a, b) => {
-    return b.length - a.length;
-  });
+  // Convert the set back to an array and sort it by length
+  const cleanedArray = Array.from(uniqueSubstrings).sort(
+    (a, b) => b.length - a.length
+  );
+
   return cleanedArray;
 };
