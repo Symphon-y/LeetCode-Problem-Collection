@@ -13,7 +13,7 @@ You may assume the two numbers do not contain any leading zero, except the numbe
 
 
 #### Example 1:
-![Alt text](./addtwonumber1.jpg)
+![Alt text](../../assets/0002_add_two_numbers/addtwonumber1.jpg)
 
 <b>Input:</b>
 ```
