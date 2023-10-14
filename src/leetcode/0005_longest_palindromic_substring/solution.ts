@@ -1,33 +1,6 @@
-const getAllSubstrings = (s: string): string[] => {
-  let result: string[] = [];
-  for (let i = 0; i < s.length; i++) {
-    for (let j = i + 1; j <= s.length; j++) {
-      result.push(s.slice(i, j));
-    }
-  }
-  return result;
-};
-
-const removeAllNonPalindromesFromArray = (arr: string[]): string[] => {
-  let result: string[] = [];
-  arr.forEach((s: string) => {
-    isPalindrome(s) && result.push(s);
-  });
-  return result;
-};
-
-const isPalindrome = (s: string): boolean => {
-  let result: boolean = true;
-  // reverse the input string
-  let r: string = s.split('').reverse().join('');
-  // check that the values at the indexes of the reverse and input string match
-  for (let i = 0; i < s.length; i++) {
-    // if they do not match set the result to false
-    s[i] !== r[i] && (result = false);
-  }
-  // return the result
-  return result;
-};
+import { getAllSubstrings } from '../../utilities/0003_length_of_longest_substring/getAllSubstrings.ts';
+import { isPalindrome } from '../../utilities/0005_longest_palindromic_substring/isPalindrome.ts';
+import { removeAllNonPalindromesFromArray } from '../../utilities/0005_longest_palindromic_substring/removeAllNonPalindromesFromArray.ts';
 
 export const longestPalindrome = (s: string): string => {
   // handle edge cases
