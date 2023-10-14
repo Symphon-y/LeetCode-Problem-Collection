@@ -2,8 +2,6 @@ const mergeAndSortTwoArrays = <T>(left: T[], right: T[]): T[] => {
   const result: T[] = [];
   let leftIndex: number = 0;
   let rightIndex: number = 0;
-  console.log('left', left);
-  console.log('right', right);
 
   while (leftIndex < left.length && rightIndex < right.length) {
     if (left[leftIndex] < right[rightIndex]) {
