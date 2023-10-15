@@ -10,6 +10,9 @@ This Git repository is a collection of LeetCode problems, each solved using Type
     - [Prerequisites](#prerequisites)
     - [Installation](#installation)
     - [Usage](#usage)
+  - [Visual Studio Code and Excalidraw Extension](#visual-studio-code-and-excalidraw-extension)
+    - [Installation](#installation-1)
+    - [Using Excalidraw Files](#using-excalidraw-files)
   - [Project Structure](#project-structure)
   - [Running Tests](#running-tests)
   - [Troubleshooting](#troubleshooting)
@@ -58,26 +61,71 @@ npm run test
 ```
 4. You can also add custom test cases in the problem-name.test.ts file:
 
+## Visual Studio Code and Excalidraw Extension
+
+[Visual Studio Code (VSCode)](https://code.visualstudio.com/) is a popular code editor that provides a rich development environment for TypeScript and JavaScript projects. You can enhance your LeetCode problem-solving experience by using VSCode along with the Excalidraw extension to visualize and collaborate on solutions.
+
+### Installation
+
+1. **Visual Studio Code**: If you haven't already, download and install [Visual Studio Code](https://code.visualstudio.com/).
+
+2. **Excalidraw Extension**: To work with Excalidraw files, you can use the [Excalidraw extension for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=excalidraw.excalidraw). You can install this extension from the VSCode marketplace by searching for "Excalidraw."
+
+### Using Excalidraw Files
+
+Excalidraw is a versatile tool for creating diagrams, sketches, and illustrations. You can use it to visualize and document your LeetCode problem solutions with flowcharts, diagrams, and other visual aids.
+
+1. Open VSCode and navigate to the problem's directory within your project.
+
+2. Create or open an Excalidraw file (with a .excalidraw extension) to sketch your solution. You can create a new Excalidraw file by right-clicking in the file explorer and selecting "New File."
+
+3. Use the Excalidraw extension to create diagrams and flowcharts that explain your thought process and solution. You can easily draw boxes, arrows, and other shapes to illustrate your code's logic.
+
+4. Save and manage your Excalidraw files directly from VSCode.
+
+5. Consider adding a reference to your Excalidraw file in the problem's README to share your visual solution with others.
+
+By using the Excalidraw extension in VSCode, you can enhance your problem-solving skills and communicate your solutions more effectively.
+
+
 ## Project Structure
 The repository has the following structure:
 ```bash
 |--leetcode/
 |   |-- src/
+|   |   |-- assets/
+|   |   |   |-- problem-1/
+|   |   |   |-- ...
 |   |   |-- leetcode/
 |   |   |   |-- problem-1/
+|   |   |   |   |-- diagram.excalidraw
 |   |   |   |   |-- solution.ts
-|   |   |   |   |-- problem-1.test.ts
+|   |   |   |   |-- readme.md
 |   |   |   |
 |   |   |   |-- problem-2/
+|   |   |   |   |-- diagram.excalidraw
 |   |   |   |   |-- solution.ts
-|   |   |   |   |-- problem-2.test.ts
+|   |   |   |   |-- readme.md
 |   |   |   |
 |   |   |   |-- ...
-|   |
+|   |   |-- scripts/
+|   |   |-- tests/
+|   |   |   |-- problem-1/
+|   |   |   |   |-- problem-1.test.ts
+|   |   |   |-- problem-2/
+|   |   |   |   |-- problem-2.test.ts
+|   |   |   |-- ...
+|   |   |-- types/
+|   |   |   |-- problem-1/
+|   |   |   |-- ...
+|   |   |-- utilities/
+|   |   |   |-- problem-1/
+|   |   |   |-- ...
+|   |-- index.ts
 |   |-- package.json
 |   |-- jest.config.js
 |   |-- tsconfig.json
-|   |-- README.md
+|   |-- readme.md
 |   |-- .gitignore
 
 ```
