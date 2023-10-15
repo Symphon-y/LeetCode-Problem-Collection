@@ -1,41 +1,5 @@
-const createPattern = (s: string, numRows: number): string => {
-  let isIndexAscending: boolean = true;
-  let i: number = 0;
-
-  let pattern: string = '';
-  for (let j = 0; j < s.length; j++) {
-    if (isIndexAscending) {
-      pattern += i;
-      i++;
-      if (i >= numRows - 1) {
-        isIndexAscending = false;
-      }
-    } else {
-      pattern += i;
-      i--;
-      if (i <= 0) {
-        isIndexAscending = true;
-      }
-    }
-  }
-  return pattern;
-};
-
-const createZigZagSchema = (
-  s: string,
-  pattern: string
-): { [key: string]: any } => {
-  let objectCache: { [key: string]: any } = {};
-
-  for (let i = 0; i < s.length; i++) {
-    if (!objectCache[pattern[i]]) {
-      objectCache[pattern[i]] = [];
-    }
-    objectCache[pattern[i]].push(s[i]);
-  }
-
-  return objectCache;
-};
+import { createPattern } from '../../utilities/0006_zigzag_conversion/createPattern.ts';
+import { createZigZagSchema } from '../../utilities/0006_zigzag_conversion/createZigZagSchema.ts';
 
 export const convert = (s: string, numRows: number): string => {
   // Handle edge cases
